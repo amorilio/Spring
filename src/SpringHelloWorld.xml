@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="Spring3HelloWorldBean"
+	class="com.ilia.Spring3HelloWorld" />
+
+<bean id="InjectBean"
+	class="com.ilia.InjectBean"     
+    p:name="IliaManasherov" 
+    p:age="34" 
+    p:address="Ashdod"/>
+    
+ 
+<bean id="InheritanceParent"
+	class="com.ilia.Inheritance"     
+    p:name="IliaManasherov"
+    p:adress="Ashdod Parent"/>
+<bean id="InheritanceChild1"
+	class="com.ilia.Inheritance" parent="InheritanceParent"
+    p:adress="Ashdod Child1"/>
+<bean id="InheritanceChild2" parent="InheritanceParent"
+	class="com.ilia.Inheritance"/>
+    
+</beans>
